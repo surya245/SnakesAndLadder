@@ -16,10 +16,10 @@ public class Main {
         FileReader fileReader = new FileReader(Paths.get(INPUT_FILE_PATH));
 
         CellCreationService cellCreationService =
-                new CellCreationService(BOARD_SIZE);
+                new CellCreationService();
 
         BoardCreationService boardCreationService =
-                new BoardCreationService(cellCreationService);
+                new BoardCreationService(cellCreationService,BOARD_SIZE);
 
         List<String> playerNames = fileReader.getNames();
 
